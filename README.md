@@ -1,4 +1,5 @@
-#Northwez Reservation System
+# Northwez Reservation System
+
 Created by: Anton Bondoc, Angelo Hizon, Leslie Mallari, and Aaron Santos
 
 Northwez is a reservation system created for a multi-media company. The reservation system streamlines the approval, rejection, and set-up of appointments for the company, while allowing the clients to see the progress of their requests. 
