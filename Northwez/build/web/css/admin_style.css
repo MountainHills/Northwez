@@ -1,0 +1,850 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Lekton:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Antonio:wght@100&family=Montserrat:wght@100&family=Red+Hat+Display&family=Roboto+Mono:ital,wght@0,100;1,100&display=swap");
+/* 
+font-family: 'Jost', sans-serif;
+font-family: 'Lekton', sans-serif; 
+font-family: 'Roboto Mono', monospace;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Antonio', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Alegreya Sans SC', sans-serif;
+*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: auto;
+  background: linear-gradient(100deg, #1f0000, #111111, #1b1b1b, #222222, #080808, #2c0000);
+  background-size: 300% 300%;
+  -webkit-animation: change 60s ease-in-out infinite;
+          animation: change 60s ease-in-out infinite;
+  scroll-behavior: smooth;
+}
+
+@-webkit-keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #cecece;
+}
+
+#menuToggle {
+  position: absolute;
+  top: 4.5%;
+  left: 3%;
+  display: block;
+  z-index: 999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 3em;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+  background: #cdcdcd;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menuToggle input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menuToggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+#menu {
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  z-index: 999;
+  font-family: "Antonio", sans-serif;
+  background: transparent;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 5px;
+  font-size: 0.6em;
+}
+
+.header_logo {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header_logo img {
+  cursor: default;
+  width: 6em;
+  color: #fb2274;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.main-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0 7em;
+  width: 100%;
+}
+
+.main-container .new-requests {
+  margin-top: 170px;
+  display: inherit;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+  max-width: 100%;
+}
+
+.main-container .new-requests fieldset {
+  min-width: 100%;
+  height: auto;
+  border: none;
+  border-top: 3px solid white;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.main-container .new-requests fieldset legend {
+  padding: 0 20px;
+  font-family: "Antonio", sans-serif;
+  font-size: 3em;
+  color: #ffffff;
+  margin-left: 100px;
+}
+
+.main-container .new-requests fieldset .req-box {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  line-height: 200px;
+  text-align: center;
+  vertical-align: auto;
+  margin: 20px;
+  height: 200px;
+  width: 370px;
+  background: #00000017;
+  border: 2px solid #fff;
+  overflow: hidden;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1 {
+  opacity: 0;
+  height: inherit;
+  width: 370px;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: all;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+  background: transparent;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons .button {
+  background: none;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  width: auto;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons .accept {
+  color: #ffffff;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons .accept:hover {
+  color: #378043;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons .reject {
+  color: #ffffff;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons .reject:hover {
+  color: #c05050;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons .btn {
+  line-height: 40px;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons form input {
+  margin-top: 10px;
+  border: none;
+  background: none;
+  outline: none;
+  color: #ffffff;
+  border-bottom: solid 2px #ffffff;
+  text-align: center;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons form input ::-webkit-input-placeholder {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons form input :-ms-input-placeholder {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: center;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons form input ::-ms-input-placeholder {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: center;
+}
+
+.main-container .new-requests fieldset .req-box .choices-1.active .buttons form input ::placeholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.main-container .new-requests fieldset .req-box .req-box-text {
+  height: 100%;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 15px;
+  color: #fff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 1;
+}
+
+.main-container .new-requests fieldset .req-box .req-box-text h1,
+.main-container .new-requests fieldset .req-box .req-box-text h3 {
+  line-height: 30px;
+}
+
+.main-container .new-requests fieldset .req-box .req-box-text h1 {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.main-container .new-requests fieldset .req-box .req-box-text h3 {
+  text-transform: lowercase;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+.main-container .new-requests fieldset .req-box .req-box-text h3 b {
+  padding-right: 10px;
+}
+
+.main-container .new-requests fieldset .req-box .req-box-text h3 b::after {
+  content: ":";
+}
+
+.main-container .new-requests fieldset .req-box .req-box-text.active {
+  opacity: 0;
+}
+
+.main-container .new-requests fieldset .req-box .req-box-text.finished {
+  pointer-events: none;
+  padding: 0;
+  width: 0;
+}
+
+.main-container .new-requests fieldset::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.main-container .new-requests fieldset::-webkit-scrollbar {
+  width: 3px;
+  background-color: transparent;
+}
+
+.main-container .new-requests fieldset::-webkit-scrollbar-thumb {
+  width: 1px;
+  background-color: #272727;
+}
+
+.main-container .ongoing {
+  display: inherit;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+  max-width: 100%;
+}
+
+.main-container .ongoing fieldset {
+  min-width: 100%;
+  height: auto;
+  border: none;
+  border-top: 3px solid white;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.main-container .ongoing fieldset legend {
+  padding: 0 20px;
+  font-family: "Antonio", sans-serif;
+  font-size: 3em;
+  color: #ffffff;
+  margin-left: 100px;
+}
+
+.main-container .ongoing fieldset .ongoing-box {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: auto;
+  margin: 20px;
+  height: 490px;
+  width: 370px;
+  background: #00000017;
+  border: 2px solid #fff;
+  overflow: hidden;
+}
+
+.main-container .ongoing fieldset .ongoing-box .title {
+  pointer-events: none;
+  position: absolute;
+  color: #ffffff;
+  font-size: 4.4em;
+  width: 100%;
+  top: 40%;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.main-container .ongoing fieldset .ongoing-box .title.active {
+  opacity: 0;
+}
+
+.main-container .ongoing fieldset .ongoing-box .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main-container .ongoing fieldset .ongoing-box .img.active {
+  opacity: 0.29;
+  pointer-events: none;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text {
+  height: 100%;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 15px;
+  color: #fff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text h1,
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text h2 {
+  line-height: 50px;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text h1 {
+  font-family: "Red Hat Display", sans-serif;
+  margin-bottom: 10px;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-transform: lowercase;
+  font-family: "Alegreya Sans SC", sans-serif;
+  width: 330px;
+  margin-bottom: 10px;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text h2 textarea {
+  margin-top: 20px;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  background: #22222280;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text h2 textarea:focus {
+  outline: none;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text input {
+  border: 2px solid #ffffff;
+  color: white;
+  border-radius: 25px;
+  background: none;
+  padding: 5px 20px;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text input::-webkit-input-placeholder {
+  padding: 10px;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text input:-ms-input-placeholder {
+  padding: 10px;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text input::-ms-input-placeholder {
+  padding: 10px;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text input::placeholder {
+  padding: 10px;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text .list {
+  margin-bottom: 10px;
+}
+
+.main-container .ongoing fieldset .ongoing-box .ongoing-box-text .submit {
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: white;
+  width: 150px;
+}
+
+.main-container .ongoing fieldset .ongoing-box .upload {
+  position: absolute;
+  top: 28.5%;
+  right: 7%;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background: transparent;
+  width: 50%;
+  cursor: pointer;
+}
+
+.main-container .ongoing fieldset::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.main-container .ongoing fieldset::-webkit-scrollbar {
+  width: 3px;
+  background-color: transparent;
+}
+
+.main-container .ongoing fieldset::-webkit-scrollbar-thumb {
+  width: 1px;
+  background-color: #272727;
+}
+
+.main-container .completed {
+  display: inherit;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+  max-width: 100%;
+  margin-bottom: 70px;
+}
+
+.main-container .completed fieldset {
+  min-width: 100%;
+  height: auto;
+  border: none;
+  border-top: 3px solid white;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.main-container .completed fieldset legend {
+  padding: 0 20px;
+  font-family: "Antonio", sans-serif;
+  font-size: 3em;
+  color: #ffffff;
+  margin-left: 100px;
+}
+
+.main-container .completed fieldset .completed-box {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: auto;
+  margin: 20px;
+  height: 490px;
+  width: 370px;
+  background: #00000017;
+  border: 2px solid #fff;
+  overflow: hidden;
+}
+
+.main-container .completed fieldset .completed-box .title {
+  pointer-events: none;
+  position: absolute;
+  color: #ffffff;
+  font-size: 4.4em;
+  width: 100%;
+  top: 40%;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.main-container .completed fieldset .completed-box .title.active {
+  opacity: 0;
+}
+
+.main-container .completed fieldset .completed-box .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main-container .completed fieldset .completed-box .img.active {
+  opacity: 0.29;
+  pointer-events: none;
+}
+
+.main-container .completed fieldset .completed-box .completed-box-text {
+  height: 100%;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  color: #fff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.main-container .completed fieldset .completed-box .completed-box-text h1 {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 2em;
+}
+
+.main-container .completed fieldset .completed-box .completed-box-text h2 {
+  font-family: "Roboto Mono", monospace;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.main-container .completed fieldset::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.main-container .completed fieldset::-webkit-scrollbar {
+  width: 3px;
+  background-color: transparent;
+}
+
+.main-container .completed fieldset::-webkit-scrollbar-thumb {
+  width: 1px;
+  background-color: #272727;
+}
+
+@media (max-width: 378px) {
+  .main-container {
+    padding: 0;
+  }
+  .req-box,
+  .ongoing-box,
+  .completed-box {
+    width: 330px !important;
+  }
+  .ongoing-box-text h2 {
+    width: 298px !important;
+  }
+  .ongoing-box {
+    height: 430px !important;
+  }
+  .ongoing-box-text h2 textarea {
+    height: 140px !important;
+  }
+  #menuToggle {
+    left: 8%;
+  }
+}
+/*# sourceMappingURL=admin_style.css.map */

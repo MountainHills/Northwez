@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Lekton:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Antonio:wght@100&family=Montserrat:wght@100&family=Red+Hat+Display&family=Roboto+Mono:ital,wght@0,100;1,100&display=swap");
+/* 
+font-family: 'Jost', sans-serif;
+font-family: 'Lekton', sans-serif; 
+font-family: 'Roboto Mono', monospace;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Antonio', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Alegreya Sans SC', sans-serif;
+*/
+html {
+  overflow-x: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background: linear-gradient(100deg, #1f0000, #111111, #1b1b1b, #222222, #080808, #2c0000);
+  background-size: 300% 300%;
+  -webkit-animation: change 60s ease-in-out infinite;
+          animation: change 60s ease-in-out infinite;
+  scroll-behavior: smooth;
+}
+
+@-webkit-keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #141414;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #cecece;
+}
+
+.header_logo {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header_logo img {
+  cursor: default;
+  width: 6em;
+  color: #fb2274;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: transparent;
+}
+
+.text .container {
+  margin-top: -5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  max-width: 600px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text .container h1 {
+  font-size: 6vw;
+  letter-spacing: 0.1em;
+  color: white;
+  font-family: "Jost", sans-serif;
+  -webkit-transition: 0.46s ease-in-out;
+  transition: 0.46s ease-in-out;
+  margin: 0;
+}
+
+.text .container h2 {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 1.6vw;
+  color: #ffffff;
+  letter-spacing: 0.9em;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.text .container a {
+  font-family: "Red Hat Display", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 0.8em;
+  color: #000000;
+  padding: 5px 0px 5px 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #fff;
+  border-radius: 25px;
+  width: 20%;
+  letter-spacing: 0.6em;
+  margin-top: 20px;
+}
+
+.grid {
+  text-align: center;
+  max-width: 95vw;
+  margin: 2.5vw auto;
+  overflow: hidden;
+}
+
+.grid-item {
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.grid-item img {
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.grid-item img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.arrow {
+  position: fixed;
+  bottom: 1.7%;
+  left: 50%;
+  margin-left: -20px;
+  cursor: pointer;
+}
+
+.arrow:before,
+.arrow:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -24px;
+  width: 30px;
+  height: 7px;
+  border-radius: 10px;
+  display: block;
+  background: #fff;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.arrow:after {
+  right: inherit;
+  left: -24px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.animated {
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s both infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-60px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-60px);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 378px) {
+  html {
+    overflow-x: hidden;
+  }
+  .text .container h1 {
+    font-size: 3em;
+  }
+  .text .container h2 {
+    font-size: 1.2em;
+  }
+  .text .container a {
+    width: 100px;
+  }
+  .arrow {
+    bottom: 1.7%;
+    left: 51.5%;
+  }
+}
+
+@media (min-width: 500px) {
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .grid-item {
+    width: 33.333%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .grid-item {
+    width: 25%;
+  }
+}
+
+@media (min-width: 2100px) {
+  .grid-item {
+    width: 20%;
+  }
+}
+/*# sourceMappingURL=gallery_style.css.map */
