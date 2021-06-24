@@ -1,6 +1,6 @@
 # Northwez Reservation System
 
-Created by: [Anton Bondoc](https://github.com/MountainHills), [Angelo Hizon](https://github.com/angelohizon-coder), [Leslie Mallari](https://github.com/LeslieMallari), [Aaron Santos](https://github.com/aaronjoe51)
+Created by: [Anton Bondoc](https://github.com/MountainHills), [Angelo Hizon](https://github.com/angelohizon-coder), [Leslie Mallari](https://github.com/LeslieMallari), and [Aaron Santos](https://github.com/aaronjoe51)
 
 Northwez is a reservation system created for a multi-media company. The reservation system streamlines the approval, rejection, and set-up of appointments for the company, while allowing the clients to see the progress of their requests. 
 
@@ -20,6 +20,8 @@ Northwez is a reservation system created for a multi-media company. The reservat
 - See Ongoing and Finished Projects
 - PDF Record of Ongoing Projects
 
-## Flow Diagram of Northwez
+## Northwez Flow Diagram
 
-[My image](username.github.com/repository/img/image.jpg)
+[Flow Diagram of Northwez](https://github.com/MountainHills/Northwez/blob/main/Screenshots/FlowDiagram.png)
+
+Flow Diagram created by Leslie Mallari
