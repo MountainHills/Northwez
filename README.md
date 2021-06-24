@@ -22,6 +22,6 @@ Northwez is a reservation system created for a multi-media company. The reservat
 
 ## Northwez Flow Diagram
 
-[Flow Diagram of Northwez](https://github.com/MountainHills/Northwez/blob/main/Screenshots/FlowDiagram.png?raw=true)
+![Flow Diagram of Northwez](https://github.com/MountainHills/Northwez/blob/main/Screenshots/FlowDiagram.png?raw=true)
 
 Flow Diagram created by Leslie Mallari
