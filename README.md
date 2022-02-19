@@ -10,6 +10,7 @@ Northwez is a reservation system created for a multi-media company. The reservat
 - Captcha
 - Error Handling
 - Session Management
+- Data Management
 
 ### Client-side
 - Booking
